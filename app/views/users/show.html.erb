@@ -1,2 +1,19 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h2>User info</h2>
+<table>
+  <tr>
+  <%= image_tag @user.get_profile_image("100x100") %>
+  </tr>
+  <tr>
+    <th>name</th>
+    <th><%= @user.name %></th>
+  </tr>
+  <tr>
+    <th>introduction</th>
+    <th><%= @user.introduction %></th>
+  </tr>
+  <tr>
+    <% if @user == current_user %>
+      <p><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
+    <% end %>
+  </tr>
+</table>
