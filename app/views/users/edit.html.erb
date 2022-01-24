@@ -4,7 +4,7 @@
       <h2>User info</h2>
       <%= form_with model: @user, local:true do |f| %>
         <label for="inputName">Name</label><br>
-        <%= f.text_field :name, autofocus: true, id:"inputName" ra%><br>
+        <%= f.text_field :name, autofocus: true, id:"inputName" %><br>
         <label for="inputImage">Image</label><br>
         <%= f.file_field :profile_image, accept: "image/*" %><br>
         <label for="inputIntroduction">Introduction</label><br>

@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   def show
     @book = Book.new
     @user = current_user
-    @book_new = Book.all
+    @books = @user.books
   end
 
   def edit
@@ -25,9 +25,9 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :profile_image, :introduction)
+    params.require(:user).permit(:name, :image_profile, :introduction)
   end
 end
 
-            
-            
+
+
