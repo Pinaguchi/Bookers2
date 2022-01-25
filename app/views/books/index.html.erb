@@ -1,3 +1,4 @@
+<div class="row">
 <%= render 'books/info', {book: @book, user: @user} %>
 
       <div class="col-md-8 offset-md-1">
@@ -14,7 +15,7 @@
           <% @books.each do |book| %>
           <tbody>
             <tr>
-              <td><%= image_tag book.user.get_profile_image("40x40") %></td>
+              <td><%= image_tag book.user.get_profile_image("100x100") %></td>
               <td><%= link_to book.title,"/books/#{book.id}" %></td>
               <td><%= book.body %></td>
             </tr>
@@ -24,5 +25,4 @@
 
       </div>
   </div>
-</div>
 
